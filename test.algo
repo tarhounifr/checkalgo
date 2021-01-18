@@ -1,0 +1,40 @@
+ALGORITHM algorithm_phrase
+VAR
+    i:=CHAR;
+    j,sentence:= STRING;
+    count:= INTEGER;
+BEGIN
+    REPEAT
+        READ(sentence)
+    UNTIL (len.sentence==".")
+    FOR i in range (0,len.sentence)
+          count= count+1
+          write(nbrchar=count)
+    END_FOR
+    FOR j range (0,len.sentence)
+        count= count+1
+        write(nbrmot=count)
+    END_FOR
+    SWITCH (sentence) DO
+        case 1 : for i in range(0, len(sentence)):  
+    sentence[i] == 'a':  
+        count = count + 1;
+        case 2 : for i in range(0, len(sentence)):  
+    sentence[i] == 'e':  
+        count = count + 1
+        case 3 : for i in range(0, len(sentence)):  
+    sentence[i] == 'i':  
+        count = count + 1
+        case 4 : for i in range(0, len(sentence))
+    sentence[i] == 'o':  
+        count = count + 1;
+        case 5 : for i in range(0, len(sentence)):  
+    sentence[i] == 'u':  
+        count = count + 1
+        case 6 : for i in range(0, len(sentence)):  
+    sentence[i] == 'y':  
+        count = count + 1 
+        defaut
+        write(nbrvoy=count)
+    END_SWITCH
+END
