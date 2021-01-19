@@ -1,0 +1,37 @@
+ALGORITHM algorithm_sentence
+VAR
+    sentence: CHAR ;
+    nbchar,nbword,nbvoy,i:INTEGER;
+BEGIN
+    WHILE (sentence<>".") DO
+    READ(sentence);
+    FOR i FROM 0 TO length.sentence  DO
+        IF (i<>0)
+        nbrchar:=nbrchar+1;
+        ELSE nbchar:=0;
+    END_FOR
+    FOR i FROM 0 TO length.sentence  DO
+    IF (sentence=" ") THEN
+        nbword:= nbword +1;
+        ELSE (sentence=".") THEN
+        nbword:= nbword +1;
+    END_IF
+    FOR i FROM 0 TO length.sentence  DO
+    IF (sentence="a") THEN
+        nbvoy:= nbvoy +1;
+        ELSE (sentence="e") THEN
+           nbvoy:= nbvoy +1;
+           ELSE (sentence="i") THEN
+           nbvoy:= nbvoy +1;
+           ELSE (sentence="o") THEN
+           nbvoy:= nbvoy +1;
+           ELSE (sentence="u") THEN
+           nbvoy:= nbvoy +1;
+           ELSE (sentence="y") THEN
+           nbvoy:= nbvoy +1;
+        END_IF
+     END_WHILE
+    Write("The length of the sentence is ",nbchar);
+    Write("The number of words in the sentence is ",nbword);
+    Write("he number of vowels in the sentence. is ",nbvoy); 
+END
